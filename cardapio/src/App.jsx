@@ -47,7 +47,7 @@ export default function App() {
     let garrafa = item.garrafa != null ? item.garrafa : null;
 
     // Look for `lata` and `garrafa` prices inside the name text like "— lata 13,00" or "lata 13,00"
-    const re = /(?:lata|garrafa)\s*[:\-–—]?\s*([0-9]+(?:[,\.][0-9]{2})?)/gi;
+    const re = /(?:lata|garrafa)\s*[:\-–—]?\s*([0-9]+(?:[,.][0-9]{2})?)/gi;
     let m;
     while ((m = re.exec(srcName)) !== null) {
       const whole = m[0];
